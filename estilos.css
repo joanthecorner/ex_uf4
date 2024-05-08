@@ -1,0 +1,984 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    background: url(img/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 0;
+}
+
+header .contenedor {
+    position: relative;
+    height: 700px;
+}
+
+
+header .menu {
+    width: 100%;
+    text-align: right;
+}
+
+header .menu a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    display: inline-block;
+    margin: 40px 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+header .menu a:hover {
+    text-decoration: underline;
+}
+
+header .textos {
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    margin-top: -52px;
+}
+
+header .textos .nombre {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+header .textos .nombre span {
+    font-weight: 300;
+}
+
+
+header .textos h3 {
+    font-weight: 300;
+    font-size: 25px;
+    font-style: italic;
+}
+
+
+nav {
+    width: 100%;
+    background-color: rgba(37, 18, 1, 255);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: top 0.9s ease, height 0.3s ease;
+
+    transition-duration: 0.75s;
+}
+
+nav #menu {
+    height: 100px;
+}
+
+nav #submenu {
+    background-color: rgba(37, 18, 1, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+
+}
+
+nav #submenu a {
+    margin: 0;
+}
+
+
+/*INICIO SUBMENUS*/
+
+.elementoMenu {
+    float: left;
+
+    margin: 0px 2px;
+    line-height: 50px;
+}
+
+.elementoMenu>a {
+    font-family: serif;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    transition-property: color;
+    transition-duration: 0.5s;
+}
+
+.elementoMenu>a:hover {
+    color: #FF5200;
+}
+
+#submenu {
+    width: 200px;
+    height: 250px;
+    list-style: none;
+    position: absolute;
+    top: 100px;
+    z-index: 1;
+
+    display: none;
+
+}
+
+.elementoSubMenu {
+    width: 100%;
+    height: 10px;
+    line-height: 10px;
+
+}
+
+header .menu a:hover {
+    color: #FF5200;
+    transition-property: color;
+    transition-duration: 0.5s;
+    text-decoration: none;
+
+}
+
+.elementoSubMenu>a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.75rem;
+
+    transition-property: color;
+    transition-duration: 0.5s;
+}
+
+.elementoSubMenu>a:hover {
+    color: #FF5200;
+}
+
+
+
+.elementoMenu:hover #submenu {
+    display: block;
+}
+
+/*FIN DE SUBMENUS */
+
+
+/*INICIO SECTION MAIN(ACERCA-DE)*/
+
+.main {
+    background: url(img/bg-textura.png);
+    background-repeat: repeat;
+}
+
+.main .acerca-de .contenedor {
+    overflow: visible;
+    position: relative;
+}
+
+.main .acerca-de .foto {
+    width: 80%;
+    position: absolute;
+    left: 0;
+    top: -50px;
+    z-index: 0;
+}
+
+.main .acerca-de .foto img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.main .acerca-de article {
+    background: #fff;
+    padding: 40px;
+    width: 50%;
+    position: relative;
+    float: right;
+    top: 150px;
+}
+
+.main .acerca-de article h3 {
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.main .acerca-de article p {
+    line-height: 28px;
+    margin-bottom: 50px;
+}
+
+
+.main .acerca-de .foto img {
+    filter: grayscale(50%);
+    transition: filter 0.5s ease;
+}
+
+.main .acerca-de article:hover .main .acerca-de .foto img {
+    filter: grayscale(0%);
+}
+
+
+@keyframes animacionTitulo {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.nombre span {
+    display: inline-block;
+    animation: animacionTitulo 2s infinite;
+}
+
+
+.textos {
+    text-align: center;
+}
+
+.textos h1 {
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+.textos h1 span {
+    color: #FF5200;
+}
+
+.textos h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+
+/*FIN SECTION MAIN(ACERCA-DE)*/
+
+/* INICIO SECCION CARTA DE  MENU Y PRECIO */
+
+.main .menu {
+    padding-top: 570px;
+    margin-bottom: 50px;
+}
+
+.main .menu .titulo {
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main .menu .contenedor-menu {
+    border: 1px solid #000;
+    background: transparent;
+    padding: 10px;
+    overflow: hidden;
+}
+
+
+.main .menu article {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.main .menu article .categoria {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main .menu article .platillo {
+    overflow: hidden;
+    padding-bottom: 20px;
+    border-bottom: 4px dotted #000;
+}
+
+.main .menu article .nombre,
+.main .menu article .precio {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.main .menu article .descripcion {
+    font-size: 16px;
+    color: #676767;
+    margin-bottom: 10px;
+}
+
+/* FIN SECCION CARTA DE  MENU Y PRECIO */
+
+
+/* INICIO DE LA GALERIA SLIDER */
+.slider-frame {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.controles {
+    position: absolute;
+    bottom: -212%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.controles button {
+    background-color: #FF5200;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.controles button:hover {
+    background-color: #FF7D50;
+}
+
+/* FIN DE LA GALERIA SLIDER */
+
+/*modal*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*INICIO DE GALERIA */
+
+.tituloGaleria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#galeria {
+    width: 100%;
+    height: 950px;
+    background-color: #FEE2B3;
+    overflow: hidden;
+}
+
+#contenedorGaleria {
+    width: 1210px;
+    height: 525px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#contenedorGaleria img {
+    width: 400px;
+    margin: 10px 20px;
+}
+
+
+
+.imgGal {
+    width: calc(25% - 10px);
+    height: calc(33.33% - 10px);
+
+    background-color: grey;
+    float: left;
+    margin: 5px;
+    display: block;
+    border-radius: 14px;
+
+}
+
+/*LIGHTBOX*/
+#modalLightBoxG {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    display: none;
+    top: 0;
+    z-index: 5;
+}
+
+
+#imageToShow {
+    width: 80vw;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+}
+
+.imageLightbox {
+    width: 50%;
+    height: auto;
+    border-radius: 50px;
+}
+
+
+.lbButtons {
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+    background-color: black;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+
+}
+
+.lbButtons:hover {
+    border-color: #FF5200;
+
+}
+
+.lbbRight {
+    right: 30px;
+}
+
+.lbbLeft {
+    left: 30px;
+}
+
+.lbButtons i {
+    font-size: 4rem;
+    color: white;
+}
+
+.lbButtons:hover i {
+
+    color: #FF5200;
+}
+
+
+
+/*FIN DE GALERIA*/
+
+
+.main .ubicacion {
+    background: #fff;
+    padding: 60px 0;
+}
+
+.main .ubicacion .titulo {
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.main .ubicacion .direccion {
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+.main .ubicacion .horarios {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+.main .ubicacion .direccion .calle {
+    margin-bottom: 15px;
+
+}
+
+.main .ubicacion .horarios h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main .ubicacion .horarios .entre-semana,
+.main .ubicacion .horarios .fin-semana {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.main .mapa {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main .mapa iframe {
+    width: 100%;
+
+}
+
+/*INICIO CSS HEADER SECCION  MENU*/
+ul {
+    list-style: none;
+}
+
+#menu li>a {
+
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    min-width: 100px;
+
+}
+
+#menu>li {
+    float: left;
+    text-align: center
+}
+
+#menu>li>ul {
+    display: none;
+}
+
+#menu>li:hover>ul {
+    display: block;
+}
+
+/* FIN DEL HEADER SECCION MENU*/
+.historia-desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 35vh;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.container::after {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: #1b3231;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    z-index: 1;
+}
+
+.evento {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+    position: relative;
+}
+
+.evento::after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+    border: 2px solid #1b3231;
+    position: absolute;
+    z-index: 2;
+    top: calc(50% - 9px);
+    left: calc(50% - 9px);
+}
+
+.fecha-aos {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: calc(42% + 20px);
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.foto-aos {
+    width: 42%;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.foto-aos::after {
+    content: "";
+    display: block;
+    border: 20px solid transparent;
+    position: absolute;
+    right: -50px;
+    top: calc(50% - 20px);
+}
+
+.foto-aos img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.evento:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.evento:nth-child(even) .fecha-aos {
+    justify-content: end;
+}
+
+.evento:nth-child(even) .foto::after {
+    content: "";
+    border: 20px solid transparent;
+    border-right: 20px solid #fff;
+    right: initial;
+    left: -50px;
+}
+
+
+
+/*INICIO LIGHTBOX*/
+.overlay .overlay-image {
+    width: 480px;
+    height: 480px;
+}
+
+.overlay {
+
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    height: 480px;
+    text-align: center;
+}
+
+.overlay.open {
+    display: block;
+}
+
+
+/*FIN LIGHTBOX*/
+
+/*MENU INTERACTIVO*/
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#carta {
+    width: 100%;
+    height: 500px;
+
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2));
+}
+
+.titulosBlanco {
+    color: white;
+}
+
+#contenedorEtiquetaPestanas {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.etiquetaPestanas {
+    width: 33.33%;
+    font-size: 2rem;
+    color: #281404;
+    float: left;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pestanaActiva {
+    color: #FF5200;
+    text-decoration: underline;
+    text-decoration-color: #FF5200;
+    text-decoration-thickness: 3px;
+    text-decoration-skip-ink: none;
+    margin-bottom: 10px;
+}
+
+
+
+.contenedorPestana {
+    margin-top: 40px;
+    width: 1275px;
+    height: 800px;
+
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.plato {
+    width: calc(33.33% - 75px);
+    height: calc(50% - 75px);
+    float: left;
+    margin-right: 37.5px;
+    margin-left: 37.5px;
+    margin-top: 37.5px;
+    margin-bottom: 37.5px;
+}
+
+.imagenPlato {
+    width: 100%;
+    height: 250px;
+    background-color: lightgrey;
+    overflow: hidden;
+}
+
+
+
+.imagenPlato img {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+}
+
+.imagenPlato img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.nombrePlato {
+    text-align: center;
+}
+
+
+.contenedorPestana.show-images .plato .imagenPlato img {
+    border: 5px solid #FF5200;
+}
+
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+
+.imagenPlato img:hover {
+    animation: scaleUp 0.3s ease;
+}
+
+
+.contenedor-formulario {
+    width: 90%;
+    height: 90vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nombre {
+    text-align: center;
+}
+
+#formu {
+    margin-top: 20px;
+}
+
+#textoReservas {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+input[type="submit"] {
+    width: calc(100% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #FF5200;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #FF7D50;
+}
+
+#modalReserva {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#modaleBoxR {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 800px;
+    background-color: lightgrey;
+    padding: 50px;
+    text-align: center;
+    border-radius: 25px;
+}
+#modaleBoxR h1 {
+    font-size: 2.5rem;
+    font-family: 'Niconne', cursive;
+    margin-bottom: 20px;
+}
+
+#modaleBoxR p {
+    font-size: 1.15rem;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 40px;
+}
+
+#modaleBoxR button {
+    font-family: 'Niconne', cursive;
+    font-size: 2rem;
+    padding: 15px 30px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#modaleBoxR button:hover {
+    background-color: #FF5200;
+}
+
+
+
+#acerca-de {
+    scroll-margin-top: 150px;
+}
+
+#menu-interactivo {
+    scroll-margin-top: -450px;
+}
+
+
+#galeria {
+    scroll-margin-top: 80px;
+}
+
+
+#historia {
+    scroll-margin-top: 90px;
+}
+
+
+#formulario {
+    scroll-margin-top: 110px;
+}
+
+
+#ubicacion {
+    scroll-margin-top: 70px;
+}
+
+
+.nombrePlato {
+    font-size: 20px;
+}
+
+.precio {
+    font-size: 20px;
+}

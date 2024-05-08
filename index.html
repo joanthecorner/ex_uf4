@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cafeteria Selene27</title>
+</head>
+
+<body>
+    <!-----------------------INICIO  DEL  HEADER------------------------------>
+    <header>
+        <div class="contenedor">
+            <nav class="menu" id="navbar">
+                <ul id="menu">
+                    <li class="elementoMenu"> <a href="#acerca-de">Acerca de</a></li>
+                    <li class="elementoMenu"> <a href="#menu-interactivo">Menú</a>
+                        <ul id="submenu">
+
+
+                            <a class="elementoSubMenu" href="#carta" onclick="marcarPestana('CartaPrimeros')">Carta de
+                                primeros</a>
+                            <a class="elementoSubMenu" href="#carta" onclick="marcarPestana('CartaSegundos')">Carta de
+                                segundos</a>
+                            <a class="elementoSubMenu" href="#carta" onclick="marcarPestana('CartaPostres')">Carta de
+                                Postres</a>
+
+                        </ul>
+                    </li>
+                    <li class="elementoMenu"> <a href="#galeria">Galeria</a> </li>
+
+                    <li class="elementoMenu"> <a href="#historia">Historia</a> </li>
+                    <li class="elementoMenu"><a href="#formulario">Formulario</a> </li>
+                    <li class="elementoMenu"><a href="#ubicacion">Ubicación</a> </li>
+                </ul>
+            </nav>
+            <div class="textos">
+                <h1 class="nombre"> Cafeteria <span>Selene27</span></h1>
+                <h3>Solo para amantes del verdadero café.</h3>
+            </div>
+        </div>
+    </header>
+    <!-----------------------FIN  DEL  HEADER------------------------------>
+
+    <!-----------------------INICIO DEL MAIN ACERCA DE------------------------------>
+
+    <section class="main" id="acerca-de">
+        <section class="acerca-de">
+            <div class="contenedor">
+                <div class="foto">
+                    <img src="img/acerca-de.jpg" alt="">
+                </div>
+                <article>
+                    <h3>Acerca de nosotros</h3>
+                    <p>Queremos que nuestros clientes tengan una experiencia excelente en nuestra cafeteria, esté en
+                        ella por negocios o por placer.</p>
+                    <p>En Café Selene27, cada taza de café cuenta una historia. Nuestros granos, cuidadosamente
+                        seleccionados de las mejores regiones cafetaleras.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-----------------------FIN DEL MAIN ACERCA DE------------------------------>
+
+
+        <!-----------------------INICIO DEL MENU ------------------------------>
+
+        <section class="menu" id="menu-interactivo">
+            <div class="contenedor">
+                <div class="contenedor-menu">
+                    <div class="contenedor-menu2">
+                        <article>
+                            <p class="categoria">Bocadillos</p>
+                            <div class="platillo">
+                                <p class="nombre">Bocadillo de Jamón y Queso</p>
+                                <p class="precio">4€</p>
+                                <p class="descripcion">Delicioso bocadillo con jamón serrano y queso manchego.</p>
+                            </div>
+                            <div class="platillo">
+                                <p class="nombre">Bocadillo Vegetariano</p>
+                                <p class="precio">4€</p>
+                                <p class="descripcion">Sabroso bocadillo con verduras frescas y queso.</p>
+                            </div>
+                            <div class="platillo">
+                                <p class="nombre">Bocadillo de Pollo a la Parrilla</p>
+                                <p class="precio">5€</p>
+                                <p class="descripcion">Bocadillo con jugoso pollo a la parrilla y aderezos especiales.
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <p class="categoria">Tipos de Café</p>
+                            <div class="platillo">
+                                <p class="nombre">Café Americano</p>
+                                <p class="precio">2€</p>
+                                <p class="descripcion">Café negro simple y reconfortante.</p>
+                            </div>
+                            <div class="platillo">
+                                <p class="nombre">Café Latte</p>
+                                <p class="precio">3€</p>
+                                <p class="descripcion">Café espresso con leche caliente y espuma de leche.</p>
+                            </div>
+                            <div class="platillo">
+                                <p class="nombre">Cappuccino</p>
+                                <p class="precio">3€</p>
+                                <p class="descripcion">Café espresso con leche caliente y espuma de leche, servido con
+                                    un toque de cacao en polvo.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-----------------------FIN  DEL MENU ------------------------------>
+
+        <!-----------------------INICIO DEL SLIDER ------------------------------>
+
+        <section class="imagenes-platos">
+            <div class="slider-frame">
+                <ul id="slider">
+                    <li> <img src="./img/1.jpg" alt=""> </li>
+                    <li> <img src="./img/2.jpg" alt=""> </li>
+                    <li> <img src="./img/3.jpg" alt=""> </li>
+                    <li> <img src="./img/4.jpg" alt=""> </li>
+                </ul>
+            </div>
+            <div class="controles">
+                <button onclick="anteriorSlide()">Anterior</button>
+                <button onclick="pausarSlide()">Pausar</button>
+                <button onclick="siguienteSlide()">Siguiente</button>
+            </div>
+        </section>
+        <!-----------------------FIN DEL SLIDER ------------------------------>
+
+        <!-----------------------INCIO DEL FORMULARIO Y MODAL  ------------------------------>
+        <section class="formulario" id="formulario">
+            <div class="contenedor-formulario">
+                <form action="" id="formu" onsubmit="modalReserva(); return false;">
+                    <p id="textoReservas">Formulario de reserva</p>
+                    <input id="formNombre" type="text" name="Nombre" placeholder="Nombre y Apellidos" required>
+                    <input id="formNumero" type="number" name="numero" placeholder="Número de personas" required>
+                    <input id="formFecha" type="date" name="fecha" placeholder="Fecha" required>
+                    <input id="formEmail" type="email" name="correo" placeholder="Correo" required>
+                    <input type="submit" id="botonEnviar" value="Enviar">
+                </form>
+            </div>
+            <div id="modalReserva">
+                <div id="modaleBoxR">
+                    <h1>Bienvenido a la web de Cafeteria Selene21</h1>
+                    <p id="mensajeReserva">Lorem ipsum dolor sit amet consectetur adipisicing quasi vitae delectus quas
+                        facilis quaerat natus amet exercitationem?</p>
+                    <button onclick="cerrarMBR()">Empieza</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="modal-message"></p>
+            </div>
+        </div>
+        <!-----------------------FIN DEL FORMULARIO Y MODAL  ------------------------------>
+
+        <!-----------------------INCIO DE LA GALERIA LIGHTBOX  ------------------------------>
+        <section id="galeria">
+            <h2 class="tituloGaleria" onclick="modalLightboxG()">Galería</h2>
+            <div id="contenedorGaleria">
+                <img class="imageGal" src="./img/1.jpg" alt="">
+                <img class="imageGal" src="./img/2.jpg" alt="">
+                <img class="imageGal" src="./img/3.jpg" alt="">
+                <img class="imageGal" src="./img/4.jpg" alt="">
+            </div>
+
+            <div id="modalLightBoxG">
+                <div id="imageToShow">
+
+                </div>
+
+                <button class="lbButtons lbbRight" onclick="nextImgGal()">
+                    <i class="fas fa-angle-right"></i>
+                </button>
+                <button class="lbButtons lbbLeft" onclick="prevImgGal()">
+                    <i class="fas fa-angle-left"></i>
+                </button>
+
+            </div>
+        </section>
+        <!-----------------------FIN DE LA GALERIA LIGHTBOX  ------------------------------>
+        <!--------------INICIO DE LA CARTA INTERACTICA PESTA´ÑAS--------------->
+        <section id="carta">
+            <div id="contenedorEtiquetaPestanas">
+                <p class="etiquetaPestanas pestanaActiva " data-target="CartaPrimeros"
+                    onclick="marcarPestana('CartaPrimeros')">Primeros</p>
+                <p class="etiquetaPestanas" data-target="CartaSegundos" onclick="marcarPestana('CartaSegundos')">
+                    Segundos</p>
+                <p class="etiquetaPestanas" data-target="CartaPostres" onclick="marcarPestana('CartaPostres')">Postres
+                </p>
+            </div>
+
+            <div class="contenedorPestana" id="CartaPrimeros">
+                <div class="plato">
+                    <div class="imagenPlato">
+                        <img src="./img/plato01.jpg" alt="">
+                    </div>
+                    <p class="nombrePlato">Patata y rebozado</p>
+                    <p class="precio">10€</p>
+                </div>
+                <div class="plato">
+                    <div class="imagenPlato">
+                        <img src="./img/plato02.jpg" alt="">
+                    </div>
+                    <p class="nombrePlato">Calamares a la plancha</p>
+                    <p class="precio">15€</p>
+                </div>
+                <div class="plato">
+                    <div class="imagenPlato">
+                        <img src="./img/plato03.jpg" alt="">
+                    </div>
+                    <p class="nombrePlato">Mariscos a la plancha </p>
+                    <p class="precio">30€</p>
+                </div>
+            </div>
+
+            <div class="contenedorPestana" id="CartaSegundos">
+                <div class="plato">
+                    <div class="imagenPlato">
+                        <img src="./img/bocadillo01.jpg" alt="">
+                    </div>
+                    <p class="nombrePlato">Bocadillo de Jamon</p>
+                    <p class="precio">5€</p>
+                </div>
+                <div class="plato">
+                    <div class="imagenPlato">
+                        <img src="./img/bocadillo02.jpg" alt="">
+                    </div>
+                    <p class="nombrePlato">Bocadillo de pollo</p>
+                    <p class="precio">3€</p>
+                </div>
+                <div class="plato">
+                    <div class="imagenPlato">
+                        <img src="./img/bocadillo03.jpg" alt="">
+                    </div>
+                    <p class="nombrePlato">Bocadillo de Atún</p>
+                    <p class="precio">3€</p>
+                </div>
+
+
+            </div>
+
+            <div class="contenedorPestana" id="CartaPostres">
+                <div class="plato">
+                    <div class="imagenPlato">
+                        <img src="./img/postres01.jpg" alt="">
+                    </div>
+                    <p class="nombrePlato">Crema catalana</p>
+                    <p class="precio">2€</p>
+                </div>
+                <div class="plato">
+                    <div class="imagenPlato">
+                        <img src="./img/postres02.jpg" alt="">
+                    </div>
+                    <p class="nombrePlato">Flan de canela</p>
+                    <p class="precio">3€</p>
+                </div>
+                <div class="plato">
+                    <div class="imagenPlato">
+                        <img src="./img/postres03.jpg" alt="">
+                    </div>
+                    <p class="nombrePlato">Plan</p>
+                    <p class="precio">4€</p>
+                </div>
+            </div>
+
+        </section>
+        <!-------------- FIN  DE LA CARTA INTERACTICA PESTA´ÑAS--------------->
+
+        <section id="historia">
+            <div class="historia-desc">
+                <h1>Historia de Selene27</h1>
+            </div>
+            <div class="container">
+                <div class="evento">
+                    <div class="foto-aos" data-aos="fade-up">
+                        <img src="./img/historia-cafeteria.jpg" alt="">
+                    </div>
+                    <h3 class="fecha-aos">Abrimos nuestro local el 21 de Marzo del 2023</p>
+                    </h3>
+                </div>
+                <div class="evento">
+                    <div class="foto-aos" data-aos="fade-down">
+                        <img src="./img/2.jpg" alt="">
+                    </div>
+                    <h3 class="fecha-aos">Tenemos 4 locales en el 2024</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="ubicacion" id="ubicacion">
+            <div class="contenedor">
+                <h3 class="titulo">Ubicación</h3>
+                <div class="direccion">
+                    <p class="calle">Carrer Beat Almato #34</p>
+                    <p class="telefono">691446457</p>
+                    <div class="correo">Joan@gmail.com</div>
+                </div>
+                <div class="horarios">
+                    <h4>Horarios</h4>
+                    <p class="entre-semana">Lunes a Viernes <br /> 8:00 am - 21:00pm</p>
+                    <p class="fin-semana">Sabado <br /> 8:00 am - 13:00pm</p>
+
+                </div>
+            </div>
+        </section>
+        <section class="mapa" id="ubicacion">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.531641942807!2d2.1793397865081765!3d41.40597665876889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a3f242d30129%3A0xecac6afa256eb9ff!2sPittier!5e0!3m2!1ses!2ses!4v1713281425763!5m2!1ses!2ses"
+                width="600" height="500" id="gmap_canvas" frameborder="0" scrolling="no" marginheight="0"
+                marginwidth="0">
+            </iframe>
+
+        </section>
+    </section>
+    <footer>
+        <div class="contenedor">
+            <div class="copyright">
+                <p class=""> Joan Vasquez IFP </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="js/efectos.js"></script>
+
+    <script src="js/lightbox.js"></script>
+</body>
+
+</html>
